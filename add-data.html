@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgMe - Add Data</title>
+    <link rel="stylesheet" href="view-data.css">
+</head>
+<body>
+    <!-- Add Data Section -->
+    <section class="add-data">
+        <h2>Add Crop Data</h2>
+        <p class="section-description">Enter details about your crops for accurate <br> tracking and insights.</p>
+
+        <form class="data-form" id="addDataForm">
+            <label for="district">District:</label>
+            <select id="district" required>
+                <option value="" disabled selected>Select District</option>
+                <option value="district1">Colombo</option>
+                <option value="district2">Gampaha</option>
+                <option value="district2">Kaluthara</option>
+                <option value="district2">Kandy</option>
+                <option value="district2">Matale</option>
+                <option value="district2">Nuwara Eliya</option>
+                <option value="district2">Galle</option>
+                <option value="district2">Matara</option>
+                <option value="district2">Hambantota</option>
+                <option value="district2">Jaffna</option>
+                <option value="district2">Kilinochchi</option>
+                <option value="district2">Mannar</option>
+                <option value="district2">Vavuniya</option>
+                <option value="district2">Mullaitivu</option>
+                <option value="district2">Batticaloa</option>
+                <option value="district2">Ampara</option>
+                <option value="district2">Trincomalee</option>
+                <option value="district2">Kurunegala</option>
+                <option value="district2">Puttalam</option>
+                <option value="district2">Anuradhapura</option>
+                <option value="district2">Polonnaruwa</option>
+                <option value="district2">Badulla</option>
+                <option value="district2">Moneragala</option>
+                <option value="district2">Rathnapura</option>
+                <option value="district2">Kegalle</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="cropType">Crop Type:</label>
+            <input type="text" id="cropType" placeholder="Enter crop type (e.g., Tomato)" required>
+
+            <label for="seedType">Seed Type:</label>
+            <input type="text" id="seedType" placeholder="Enter seed type" required>
+
+            <label for="plantDate">Planting Date:</label>
+            <input type="date" id="plantDate" required>
+
+            <label for="harvestDate">Harvest Date:</label>
+            <input type="date" id="harvestDate" required>
+
+            <label for="quantity">Quantity (in kg or tons):</label>
+            <input type="number" id="quantity" placeholder="Enter quantity" required>
+
+            <button type="button" onclick="submitData()">Submit Data</button>
+        </form>
+        <div class="navigation-link">
+            <a href="view-data.html">View Data</a>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgMe - View Data by District</title>
+    <link rel="stylesheet" href="add-data.css">
+</head>
+<body>
+    <!-- View Data Section -->
+    <section class="view-data">
+        <h2>View Crop Data by District</h2>
+        <p class="section-description">Click on a district to view data for that area.</p>
+
+        <!-- Sri Lanka Map SVG with Districts -->
+        <div class="map-container">
+            <svg
+                version="1.1"
+                id="SriLankaMap"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 500 700"
+                style="enable-background:new 0 0 500 700;"
+            >
+                <!-- Sample Districts (Add more districts as needed) -->
+                <g id="polonnaruwa" class="district" onclick="showDistrictData('polonnaruwa')">
+                    <path d="M100,100 L150,150 L100,200 Z" fill="#FFDDC1" />
+                    <text x="110" y="150" class="district-name">Polonnaruwa</text>
+                </g>
+
+                <g id="anuradhapura" class="district" onclick="showDistrictData('Anuradhapura')">
+                    <path d="M200,200 L250,250 L200,300 Z" fill="#C1E1FF" />
+                    <text x="210" y="250" class="district-name">Anuradhapura</text>
+                </g>
+
+                <g id="district2" class="district" onclick="showDistrictData('Anuradhapura')">
+                    <path d="300,300 L250,250 L200,300 Z" fill="#C1E1FF" />
+                    <text x="90" y="70" class="district-name">Anuradhapura</text>
+                </g>
+
+                <g id="district2" class="district" onclick="showDistrictData('Anuradhapura')">
+                    <path d="M200,200 L250,250 L200,300 Z" fill="#C1E1FF" />
+                    <text x="210" y="250" class="district-name">Anuradhapura</text>
+                </g>
+
+                <g id="district2" class="district" onclick="showDistrictData('Anuradhapura')">
+                    <path d="M200,200 L250,250 L200,300 Z" fill="#C1E1FF" />
+                    <text x="210" y="250" class="district-name">Anuradhapura</text>
+                </g>
+
+                <!-- Add more districts following the above pattern -->
+            </svg>
+        </div>
+
+        <!-- Popup for displaying district data -->
+        <div class="popup" id="dataPopup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h3 id="districtName">District Name</h3>
+                <p id="districtData">Data for the selected district will appear here.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
